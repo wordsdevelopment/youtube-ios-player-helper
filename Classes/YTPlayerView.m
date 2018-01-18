@@ -683,7 +683,7 @@ NSString static *const kYTPlayerStaticProxyRegexPattern = @"^https://content.goo
   [self addSubview:self.webView];
 
   NSError *error = nil;
-  NSString *path = [[NSBundle mainBundle] pathForResource:@"YTPlayerView-iframe-player" ofType:@"html"];
+  NSString *path = [[NSBundle bundleForClass:self.class] pathForResource:@"YTPlayerView-iframe-player" ofType:@"html"];
     
   // in case of using Swift and embedded frameworks, resources included not in main bundle,
   // but in framework bundle
